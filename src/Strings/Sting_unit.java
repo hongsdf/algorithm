@@ -24,9 +24,11 @@ public class Sting_unit {
 				for( ;idx+i<=s.length()/*시작 단위의 다음 지점부터 */ ;) {
 					if(unit.equals(s.substring(idx,idx+i))) {
 						cnt++; // 단위를 기준으로 다음 문단이 맞아야 cnt++
-						idx += i;
+						idx += i; 
 					}else break;
 				}
+				 
+				
 				if(cnt > 0) { // 단위에 맞는 하나로도 갯수(cnt) 가 있다면
 					len -= i/*단위크기*/ * cnt/*단위와 맞는 갯수*/; 
 					if(cnt < 9) len += 1; //aaa aaa aaa a = > 10a - > i*cnt = 9
