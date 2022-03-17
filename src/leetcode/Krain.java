@@ -12,7 +12,7 @@ public class Krain {
 }
 class Solution3 {
     public int solution(int[][] board, int[] moves) {
-        int answer = 0;
+        int answer = 0; 
         Stack<Integer> st = new Stack<Integer>();
         for(int i = 0; i < moves.length; i++){
             int pos = moves[i];
