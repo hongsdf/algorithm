@@ -43,6 +43,7 @@ class Solution {
         //  0 0 0 0 0 0
         
         // 모든 노드가 중간지점이 된다
+        // Greedy() : 핵심 모든 것을 전부 탐색한다
         for(int k = 0; k < n;k++){
             // 출발지점 -> 중간지점 -> a지점 -> b지점
           answer  = Math.min(answer , Board[s][k] + Board[k][a] + Board[k][b]);  
