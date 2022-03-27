@@ -36,6 +36,7 @@ public class Back14502 {
 		for(int i = 0; i <N; i++) {
 			st = new StringTokenizer(br.readLine(), " ");
 			for(int j = 0; j <M; j++) {
+
 				map[i][j] =	board[i][j] = Integer.parseInt(st.nextToken());
 
 			}
@@ -66,6 +67,7 @@ public class Back14502 {
 		}
 		for(int i = 0; i <N; i++) {
 			for(int j = 0; j <M; j++) {
+				
 				if(map[i][j] == 0) { // 복사본 배열내를 확인
 					map[i][j] = 1; //  순차적으로 1개씩 뒤집어 본다
 					dfs(cnt+1); // cnt 증가
@@ -79,7 +81,7 @@ public class Back14502 {
 	}
 
 	private static void dfs2() {
-		int [][] arr = new int[N][M];
+		int [][] arr = new int[N][M]; // 복사본 배열도 손상되면 안됨(재귀로 다시 돌아가기 때문에)
 		for(int i = 0; i <N; i++) {
 			for(int j = 0; j <M; j++) {
 				arr[i][j] = map[i][j];
@@ -113,7 +115,7 @@ public class Back14502 {
 
 	// 바이러스 퍼지는 함수
 	private static void bfs() {
-		int[][] copy_map = new int[N][M]; // 복사본의 복사본
+		int[][] copy_map = new int[N][M]; // 복사본의 복사본(복사본배열도 손상되면 안됨)
 		for(int i = 0; i <N; i++) {
 			for(int j = 0; j <M; j++) {
 				copy_map[i][j] = map[i][j];
