@@ -54,6 +54,7 @@ public class Chapter6D {
 		System.out.println();
 		
 	}
+}
 
 	// 재귀 함수로 모든 조합 구하기 
 	
