@@ -16,7 +16,7 @@ class Utility {
 	 */
 	public static boolean binarySearch(int[] arr, int target, int l, int r) {
 		// implement here
-		if(l == r) {
+		if(l >= r) {
 			if(arr[l] == target) return true;
 			else {
 				return false ;
@@ -43,7 +43,7 @@ public class Chapter6C {
 	 */
 	public static void main(String[] args) {
 		int[] arr = new int[] { 1, 3, 7, 8, 9, 20, 30, 50, 70, 120 };
-		int target = 121;
+		int target = 3;
 		// Arrays.sort(arr);
 
 		boolean result = Utility.binarySearch(arr, target, 0, arr.length - 1); // 구현한 함수의 결과

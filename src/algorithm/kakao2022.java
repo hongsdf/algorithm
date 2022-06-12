@@ -2,6 +2,13 @@ package algorithm;
 
 import java.util.*;
 
+// 역 관계를 표현 기법 
+
+// (중복 제외) 
+
+// 신고한 사람 목록
+// 신고 당한 목록
+
 class Kakao1 {
     public int[] solution(String[] id_list, String[] report, int k) {  
         // 신고한 모든 유저에게 정지 사실을 메일로 발송합니다.
