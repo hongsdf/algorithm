@@ -39,19 +39,19 @@ public class Chapter6D {
 	}
 
 	private static void print(int[] arr, boolean[] visit, int n) {
-		List<Integer> list = new ArrayList<>();
+//		List<Integer> list = new ArrayList<>();
 		for(int i = 0; i <n; i+=1) {
 			if(visit[i] == true) {
 				// 내림차순 정렬
-				list.add(arr[i]);
+//				list.add(arr[i]);
 				System.out.print(arr[i]+" ");
 			}
 		}
-		Collections.reverse(list);
-		for(int i = 0; i <list.size(); i++) {
-			System.out.print(list.get(i) +" ");
-		}
-		System.out.println();
+//		Collections.reverse(list);
+//		for(int i = 0; i <list.size(); i++) {
+//			System.out.print(list.get(i) +" ");
+//		}
+//		System.out.println();
 		
 	}
 }
