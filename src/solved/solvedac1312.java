@@ -28,7 +28,7 @@ public class solvedac1312 {
 		for(int i = 0; i <N-1; i++) {
 			ans *= 10;
 			ans %= B; // 한자리수씩 제거
-		}
+		} 
 		ans *= 10;
 		System.out.println(ans/B);
 	}
