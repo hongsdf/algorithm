@@ -9,6 +9,7 @@ public class solvedac1343 {
 	// AAAA BB
 	
 	
+	// O(N)
 	// 문자열을 입력받는다
 		public static void main(String[] args) throws IOException {
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
