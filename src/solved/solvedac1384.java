@@ -5,6 +5,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
+// 원형 문제 개념
+// 테스트 케이스 입력
+// 2중 배열로 선언하고 한행의 N의 값으로 신고자,당한자를 찾는 문제
+// 한행의 N을 찾으면 N의 위치를 찾는다.
+// N의 위치만큼 이동해서 찾는다.
+// 각 행의 0번째 위치는 사람이고
+// N의 위치는 음수값이 될수있다 ==> 원형으로 + 사람수를 더해 원형을 유지하도록 만든다.
+// 정답 찾기
+// 출력 값 주의
+
+
+
 public class solvedac1384 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		// 테스트 케이스를 입력받는다
