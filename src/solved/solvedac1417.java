@@ -33,7 +33,7 @@ public class solvedac1417 {
 		
 		boolean flag = false;
 		// 로직 구현
-		while(array[0] < max) {
+		while(array[0] <= max) {
 		for(int i = 1; i<N; i++) {
 			if(array[0] <= array[i]) {
 				array[0]++;
