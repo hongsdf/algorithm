@@ -22,44 +22,34 @@ public class solvedac1417 {
 		for(int i = 0; i <N; i++) {
 			array[i] = Integer.parseInt(br.readLine());
 		}
-		
 		// 최대값 찾기
-		int max = -1;
-		for(int i = 0; i <N; i++) {
-			if(array[i] > max) {
-				max = array[i];
+		while(true) {
+			boolean flag = true; // 최대값 flag
+			if(N == 1) {
+				System.out.println(0);
+				break;
 			}
-		}
-		
-		boolean flag = false;
-		// 로직 구현
-		while(array[0] <= max) {
-		for(int i = 1; i<N; i++) {
-			if(array[0] <= array[i]) {
-				array[0]++;
-				array[i]--;
-				cnt++;
+			for(int i = 1; i<N; i++) {
+				if(array[0] <= array[i]) {
+					array[0]++;
+					array[i]--;
+					cnt++;
+				}
+				
 			}
-		}
-		for(int i = 1; i<N; i++) {
-			if(array[0] <= array[i]) {
-				flag = true;
+			for(int j = 1; j<N; j++) {
+				if(array[0] <= array[j]) {
+					flag = false;
+				}
+			}
+			if(flag) {
+				System.out.println(cnt);
 				break;
 			}else {
-				flag = false;
-				break;
+				continue;
 			}
+			
 		}
-		if(flag) {
-			continue;
-		}else {
-			break;
-		}
-	}
-		
-		System.out.println(cnt);
-		
-		
 		
 	}
 }
