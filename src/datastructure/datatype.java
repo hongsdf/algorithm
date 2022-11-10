@@ -67,6 +67,7 @@ public class datatype {
 		System.out.println(list2.getClass().getSimpleName());
 		System.out.println("Á¤·Ä:" + list2);
 
+
 		// List<Stirng>
 		List<String> slist1 = new ArrayList<>(Arrays.asList("1", "2", "abc", "9"));
 		Collections.sort(slist1);
