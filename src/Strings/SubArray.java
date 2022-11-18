@@ -74,7 +74,7 @@ public class SubArray {
 			 for(int j = 0; j < i+1 ; j++) { // 여기 부분수정
 				 System.out.print("(");
 				 int start = j; int end = n+j-i-1 ; // 0 : 4 - 0 
-				                               // 1 : 4 -1
+				                              // 1 : 4 -1
 				 for(int k = start; k <= end; k++) {
 					 if(k == end) {
 						 System.out.print(brr[k]);
