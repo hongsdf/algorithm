@@ -13,7 +13,7 @@ class Adj {
 		this.adj = new ArrayList<ArrayList<Integer>>();
 		this.nodeCount = nodeCount;
 		
-	for(int i = 1; i <=nodeCount; i++) {
+	for(int i = 1; i <=2; i++) {
 		this.adj.add(new ArrayList<Integer>());
 	}
 	}
