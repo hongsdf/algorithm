@@ -1,0 +1,18 @@
+Getter/Setter
+
+Getter : 값을 가져오는 자
+Setter : 값을 세팅하는 자 
+
+왜 사용하나? - 필드값의 무결성을 유지하기 위해
+외부에서 필드를 접근을 막는다.
+private double speed; //private 비공개 처리
+setter 메서드를 통해 해당필드의 값을 세팅한다.
+public void setSpeed(double speed){
+	this.speed = speed;
+}
+
+
+외부에서 필드의 값을 읽도록 하기 위해 
+public double getSpeed(){
+	return this.speed;
+}
