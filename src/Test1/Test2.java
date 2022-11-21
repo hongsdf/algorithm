@@ -9,5 +9,7 @@ public class Test2 {
 		int crr[] = Arrays.copyOfRange(arr, 1,4); // 2,3,4
 		
 		
+		
+		
 	}
 }
