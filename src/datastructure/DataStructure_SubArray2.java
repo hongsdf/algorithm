@@ -33,7 +33,7 @@ public class DataStructure_SubArray2 {
 		int ans = max(arr);
 		System.out.println(ans);
 		
-	
+		
 	
 	}
 }
