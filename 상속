@@ -1,0 +1,23 @@
+[상속]
+
+인스턴스 필드
+인스터스 메서드는 static 이 붙어있지 않은 것
+
+*프로그래밍에서는 자식이 부모를 선택하여 상속받을 수 있다.
+객체가 완성되는 시점은  == 생성자가 완성되는 시점이다.
+
+public SmartPhone(String model,String color) {
+		super();
+		this.model = model;
+		this.color = color;
+		System.out.println("SmartPhone(String model,String color) 생성자완료");
+		super(); // x 마지막줄 작성불가
+	}
+	
+[Overriding]
+1.재정의시 접근제한자를 더 강하게 할수 없다 (default --> private 변경 불가)
+(default --> public 가능)
+2.예외처리 throws추가 생성안됨
+
+@ 어노테이션
+추가적인 기능을 제공하기 위해 필드,메서드, 클래스선언시 붙힌다.
