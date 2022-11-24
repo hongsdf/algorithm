@@ -21,7 +21,7 @@ public class 체크카드 {
 		String input[] = br.readLine().split(" ");
 		int currentMoney = Integer.parseInt(input[0]);// 처음 잔액
 		int M = Integer.parseInt(input[1]);//지난달 구름이의 거래 내역
-		
+		 
 		// 기본입력을 받는 큐 생성
 		LinkedList<command> basic = new LinkedList<>();
 		// 대기 목록 생성
