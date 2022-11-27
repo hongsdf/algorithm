@@ -21,7 +21,7 @@ class SolutioA2 {
     	 * 해당 문제는 전봇대 문제랑 연관이 있다.
     	 * 
     	 * */ 
-    	Queue<Integer> q = new LinkedList<>();
+    	
     	
     	
     	
