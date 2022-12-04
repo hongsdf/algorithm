@@ -92,7 +92,7 @@ class SolutionA5 {
         
         return answer;
     }
-	// 백트레킹 문제 판단
+
 	private void dfs(int depth,int k) { // 현재 지점다음으로 최소비용
 		
 		for(int j=0; j<list.size() ; j++) {

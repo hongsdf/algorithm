@@ -57,3 +57,67 @@ class SolutionA8 {
         return answer;
     }
 }
+
+/*
+ 
+ 고민 한 내용
+class Solution {
+    public int[] solution(int brown, int yellow) {
+        int[] answer = new int[2];
+        
+        // brown + yellow 합이 홀수이면
+        int num = brown + yellow;
+        if(num%2 == 1){ // 홀수 
+            int number = (int)Math.sqrt(num);
+            answer[0] = number;
+            answer[1] = number;
+            return;
+            
+            
+        }else{ //짝수
+            if(yellow == 2 && yellow%2 == 1){
+              answer[0] = yellow + 2; // 가로
+              answer[1] = 3; // 세로    
+            }
+            // 4이상 짝수
+            else if(yellow >= 4){
+                // Brown 갯수를 살펴봐야된다
+                int number = yellow + brown;
+            
+	// 1 	   
+	 if(){ //제곱근 함수라면
+                    answer[0] =
+                    answer[1] = 
+                    return;
+                }
+ 	// 2  
+                if(brown%yellow == 0){
+                    answer
+                }
+                
+                
+               
+                
+               
+            }
+            
+        }
+        // 합의 루트 값
+        // 9 ==> 3
+        // 25 ==> 5
+        // 49 ==> 7
+        
+        
+        // 문제  brown + yellow 합이 짝수 이면
+        
+        // 만약 yellow 값이 홀수라면
+        
+        // 만약 yellow 값이 4이상 짝수라면
+        
+        return answer;
+    }
+    
+    public boolean check(int n){
+        for(;;)
+
+*/
