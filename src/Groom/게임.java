@@ -1,6 +1,9 @@
 package Groom;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class 게임 {
 	public static void main(String[] args) throws Exception {
@@ -14,6 +17,11 @@ public class 게임 {
 		// a * k의집합에서  0이아닌 짝수 번째 숫자를 모두 곱한다. 
 		// [1,2,3,4,5]
 		// 1 2 1 2 1 2 1
+		List<Integer> list = new ArrayList<Integer>();
+		 char c2[]= input.toCharArray();
+		 for(int i = 0; i <c2.length; i++) {
+			 list.add(c2[i]-'0' );
+		 }
 		
 		 char c[] = input.toCharArray();
 		 long a = 0; long b = 1;
