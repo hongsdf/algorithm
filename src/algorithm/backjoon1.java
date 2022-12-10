@@ -3,7 +3,7 @@ package algorithm;
 import java.util.Scanner;
 
 public class backjoon1 {
-	
+	 
 		// n  ,  k
 		// 10 ,  3  == 14
 	    // 10 + (10/3 == 3) + (3/3 == 1) = 14
@@ -23,7 +23,7 @@ public class backjoon1 {
 	
 	static int kitchen(int n,int k) {
 		int result = 0;
-		if(n >= k ) { // 10, 3 = 3,3 // ÄíÆù »ç¿ë ¿©ºÎ È®ÀÎ (n >= k )
+		if(n >= k ) { // 10, 3 = 3,3 // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ (n >= k )
 			if(n/k >= 1) { // 3 >= 1, 1 >=1
 				result =  n + kitchen(n/k,k); // 10 + 3 + 1
 				
