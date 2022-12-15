@@ -4,10 +4,14 @@ import java.util.*;
 
 public class 두큐합만들기 {
 	public static void main(String[] args) {
+		long beforeTime = System.currentTimeMillis(); //코드 실행 전에 시간 받아오기
 		SolutionA13 m = new SolutionA13();
 		int[] queue1 = {1, 1};
 		int[] queue2 = {1, 5};
 		int answer = m.solution(queue1, queue2);
+		long afterTime = System.currentTimeMillis(); // 코드 실행 후에 시간 받아오기
+		long secDiffTime = (afterTime - beforeTime); //두 시간에 차 계산
+		System.out.println("시간차이(m) : "+secDiffTime);
 		System.out.println(answer);
 	}
 }
@@ -25,16 +29,16 @@ class SolutionA13 {
         // 큐안에 삽입
         Queue<Integer> q1 = new LinkedList<>();
         Queue<Integer> q2 = new LinkedList<>();
-        // q1
-        for(int a : queue1){
-            q1.add(a);
-            num1 += a;
+       
+        
+        for(int i = 0; i <queue1.length; i++) {
+        	 q1.add(queue1[i]);
+             num1 += queue1[i];
+             q2.add(queue2[i]);
+             num2 += queue2[i];
         }
-        // q2
-        for(int b : queue2){
-            q2.add(b);
-            num2 += b;
-        }
+
+        
         // 단, 어떤 방법으로도 각 큐의 원소 합을 같게 만들 수 없는 경우, -1
         // 두수의 합이 홀수인경우
         if((num1 + num2)%2 == 1) return -1;
