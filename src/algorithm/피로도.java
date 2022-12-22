@@ -13,11 +13,11 @@ public class 피로도 {
 	}
 	
 }
-class Point{
+class Point2{
     int x;
     int y;
    // int z;
-    Point(int x,int y){
+    Point2(int x,int y){
         this.x = x;
         this.y = y;
      //   this.z = z;
@@ -25,7 +25,7 @@ class Point{
 }
 
 class SolutionA5 {
-	public List<Point> list = new ArrayList<>();
+	public List<Point2> list = new ArrayList<>();
 //	public int min = 9999;
 //	public int minidxv = 0; // x좌표중 최소 값
 //	public int cnt = 0; //최종결과
@@ -41,13 +41,13 @@ class SolutionA5 {
         //1 배열정렬 어떤순으로 정렬할것인가
         // 최소필요로도가 높은것을 우선으로 선택하는 것이 좋다
        
-        
+         
         // pointer(x,y,z)
         for( int[] curr :dungeons){
             int x = curr[0];
             int y = curr[1];
            // int z = curr[0]- curr[1];
-            list.add(new Point(x,y));
+            list.add(new Point2(x,y));
         }
         
 //        Collections.sort(list, new Comparator<Point>(){
