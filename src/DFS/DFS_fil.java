@@ -1,5 +1,5 @@
 package DFS;
-
+ 
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -17,10 +17,10 @@ public class DFS_fil {
 		int row;  int col;
 	}
 	public static void dfs(int r, int c, int color) {
-		// ¿øº» º¹»çº» boolean¹è¿­
+		// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½çº» booleanï¿½è¿­
 		boolean visited[][] = new boolean[N][N];
 		Stack<Point> st = new Stack<>();
-		// point primitiveÅ¸ÀÔÀÌ ¾Æ´Ï¹Ç·Î new point
+		// point primitiveÅ¸ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´Ï¹Ç·ï¿½ new point
 		st.push(new Point(r,c));
 		
 		while(!st.isEmpty()) {
@@ -34,9 +34,9 @@ public class DFS_fil {
 			for(int i =0; i <4; i++) {
 				int nr = curr.row + dx[i];
 				int nc = curr.col + dy[i];
-				// ¹üÀ§ Á¦ÇÑ
+				// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 				if(nr < 0 || nr > N-1 || nc <0 || nc>N-1) continue;
-				// »õ·Î¿î point ¹æ¹®¿©ºÎ Ã¼Å©
+				// ï¿½ï¿½ï¿½Î¿ï¿½ point ï¿½æ¹®ï¿½ï¿½ï¿½ï¿½ Ã¼Å©
 				if(visited[nr][nc]) continue;
 				st.push(new Point(nr,nc));
 			}
