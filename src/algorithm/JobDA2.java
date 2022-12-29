@@ -2,6 +2,7 @@ package algorithm;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 
 // 문제 시간복잡도 초과
@@ -10,16 +11,16 @@ public class JobDA2 {
 	public static void main(String[] args) {
 		Solve2 m = new Solve2();
 		int n = 4;
-//		int x1[] = {2,3,5,1};
-//		int y1[] = {1,3,3,7};
-//		int x2[] = {4,5,7,3};
-//		int y2[] = {3,5,7,9};
+		int x1[] = {2,3,5,1};
+		int y1[] = {1,3,3,7};
+		int x2[] = {4,5,7,3};
+		int y2[] = {3,5,7,9};
 		
-		
-		int x1[] = {10,20,40,10};
-		int y1[] = {100,40,60,10};
-		int x2[] = {50,50,90,30};
-		int y2[] = {110,60,90,40};
+//		
+//		int x1[] = {10,20,40,10};
+//		int y1[] = {100,40,60,10};
+//		int x2[] = {50,50,90,30};
+//		int y2[] = {110,60,90,40};
 		
 //		int x1[] = {10,20,40,10};
 //		int y1[] = {10,40,60,100};
@@ -64,13 +65,14 @@ class Solve2{
 				if(!visit[i][j] && gameboard[i][j] != 0 ) {
 					List<Integer> list = new ArrayList<>();
 					int num = gameboard[i][j]; // 섬번호
-					cnt = 1;
+					//cnt = 1;
 					list.add(num);
-					set.add(num);
+					//set.add(num);
 					dfs(i,j,num,list); // 연결된섬을 모두 연결 
 					for(int number : list) {
-						answer[number-1] = cnt;
+						answer[number-1] = list.size();
 					}
+		
 				}
 				
 			}
@@ -80,6 +82,7 @@ class Solve2{
 		
 		return answer;
 	}
+
 
 	private void dfs(int x, int y,int num,List<Integer> list) {
 		// 탈출조건 범위를 초과하지 않고 방문했던 지점이면
@@ -93,7 +96,7 @@ class Solve2{
 				set.add(num);
 				list.add(gameboard[x][y]);
 				num = gameboard[x][y]; // 넘버 교체
-				cnt++;
+				//cnt++;
 				
 			}
 		}
