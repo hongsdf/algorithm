@@ -19,61 +19,94 @@ public class KAKAOBLINDRECRUITMENT순위검색 {
 	}
 }
 class SolutionK2 {
-	Map<String,List<Integer>> map = new HashMap<>();
-    int answer[];
-    public int[] solution(String[] info, String[] query) {
-        answer = new int[info.length];
-        INFO_INPUT(info);
-        for(String key :map.keySet()){
-            Collections.sort(map.get(key));
+	int answer[];
+    HashMap<String,List<Integer>> map = new HashMap<>();
+	public int[] solution(String[] info, String[] query) {
+		answer = new int[query.length];
+	
+        
+        modifyedInfo(info); // info 수정
+        for(String key : map.keySet()){
+            Collections.sort(map.get(key)); // val 정렬 
         }
-        QUERY_INPUT(query);  
-        return answer;
-    }
-    public void INFO_INPUT(String[] info){
-        for(int i = 0; i <info.length; i++){
-            String p[] = info[i].split(" ");
-            makeSentence(0,"",p); // 재귀함수구현
+        
+        modifyedQuery(query); // query수정
+        
+        
+        
+        
+        
+        
+        
+		
+		return answer;
+		
+	}
+    private void modifyedInfo(String[] info){
+        for(int i = 0; i<info.length; i++){
+           String str[] = info[i].split(" ");
+            // info 배열의 원소를 하나씩 저장
+            // java backend junior pizza
+            // java--- 150
+            // -backend-- 150
+            // --junior- 150
+            // ---pizza 150
+            // --juniorpizza 150
+            //      :
+            // javabackendjuniorpizza 150
+            
+            // java backend junior chicken 80
+            // java--- [150,80]
+            // -backend-- [150,80]
+            // --junior- [150,80]
+            //       :
+            // java backend junior chicken 80
+            makeSetance(0,"",str); // 재귀함수 구현
+            
+            
+            
         }
     }
     
-    public void makeSentence(int depth,String str,String p[]){
+    private void modifyedQuery(String[] query){
+        // 완성된 map에서 query 살피기
+        for(int i = 0; i <query.length; i++){
+            String replacequery = query[i].replaceAll(" and "," ");
+            String str[] = replacequery.split(" ");
+            answer[i] = map.containsKey(str[i]) ? binarySearch(str[0],Integer.valueOf(str[4])) : 0;
+        }
+        
+    }
+    
+    public void makeSetance(int depth,String str,String info[]){
         if(depth == 4){
             if(!map.containsKey(str)){
                 List<Integer> list = new ArrayList<>();
                 map.put(str,list);
             }
-            map.get(str).add(Integer.valueOf(p[4]));
+            map.get(str).add(Integer.parseInt(info[4])); // 값을 추가 
+            // ex) java--- = [150] -> java--- = [150,80] 80을 추가 작업
+                
             return;
         }
-        makeSentence(depth+1,str+"-",p);
-        makeSentence(depth+1,str+p[depth],p);
         
-        
-    }
-    public void QUERY_INPUT(String[] query) {
-        for(int i = 0; i <query.length; i++){
-            query[i] = query[i].replaceAll(" and ","");
-            String str[]= query[i].split(" ");
-            answer[i]=map.containsKey(str[0])? binarySearch(str[0],Integer.parseInt(str[1])) : 0 ;
-            
-        }
+        // 2가지를 탐색
+        makeSetance(depth+1,str+"-",info);
+        makeSetance(depth+1,str+info[depth],info);
     }
     
-    public int binarySearch(String key, int val){
-        
-        List<Integer> list = map.get(key);
+    private int binarySearch(String str,int score){
+        List<Integer> list = map.get(str);
         int start = 0; int end = list.size()-1;
-        while(start<=end){
-            int mid = (start + end)/2;
-            if(list.get(mid) < val){
-                start = mid + 1;
+        while(start <= end){
+            int mid = (start+end)/2;
+            if(list.get(mid) < score){
+                start = start + 1;
             }else{
-                end = mid - 1;
+                end = end - 1;
             }
         }
         return list.size() - start;
-        
         
     }
 }

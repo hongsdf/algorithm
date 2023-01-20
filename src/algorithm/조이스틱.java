@@ -21,9 +21,10 @@ class SolutionC2 {
             
             answer += Math.min(target-'A','Z'-target +1); // 앞에서 접근, 뒤에서 접근중 작은값으로 
             
-            // A 연속된구간 찾기 
+            // A 연속된구간 찾기 (2구간부터가 연속이므로
             // 사이 값 구하기 J|AA|NN
-            int start = i+1; // JAAN
+            int start = i+1; // JAAN 1,2  3
+            // AAABBBAAAA // 2
           
             while(start < n && name.charAt(start) == 'A'){
                  start+=1;
@@ -33,7 +34,9 @@ class SolutionC2 {
             // AJJAAAN  
             // [J] [A] [A] [N] 이동시 최소거리 
             // JANAAN
-            move = Math.min(move,(i*2) + n - start );
+            move = Math.min(move,(i*2) + n - start ); 
+            
+            
             
             // 처음 부터 맨 뒤부터 탐색하는 경우
             move = Math.min(move,i +  (n - start)*2);
