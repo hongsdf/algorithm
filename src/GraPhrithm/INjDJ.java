@@ -13,10 +13,10 @@ class Adj {
 		this.adj = new ArrayList<ArrayList<Integer>>();
 		this.nodeCount = nodeCount;
 		
-	for(int i = 1; i <=2; i++) {
+	for(int i = 1; i <=nodeCount; i++) {
 		this.adj.add(new ArrayList<Integer>());
 	}
-	}
+}
 	
 	// 인접 리스트 연결
 	public void addEdge(int n1, int n2) {

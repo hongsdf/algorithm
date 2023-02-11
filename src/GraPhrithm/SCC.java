@@ -26,16 +26,31 @@ public class SCC {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		v =	Integer.parseInt(br.readLine()) ;
 		visit = new boolean[v+1];
-		d = new int[v+1];
+		d = new int[v+1]; // 0 ~ 11 : 12 공간
 		st = new Stack<Integer>();
 		m = new Adj(v+1);
 		// Adj m = new Adj(v+1);
-		for(int i = 0; i <v; i++) {
-			String str[] = br.readLine().split(" ");
-			int a = Integer.parseInt(str[0]);
-			int b = Integer.parseInt(str[1]);
-			m.addEdge(a, b);
-		}
+//		for(int i = 0; i <v; i++) {
+//			String str[] = br.readLine().split(" ");
+//			int a = Integer.parseInt(str[0]);
+//			int b = Integer.parseInt(str[1]);
+			//m.addEdge(a, b);
+			
+			m.addEdge(1, 2);
+			m.addEdge(2, 3);
+			m.addEdge(3, 1);
+			m.addEdge(4, 2);
+			m.addEdge(4, 5);
+			m.addEdge(5, 7);
+			m.addEdge(6, 5);
+			m.addEdge(7, 6);
+			m.addEdge(8, 5);
+			m.addEdge(8, 9);
+			m.addEdge(9, 10);
+			m.addEdge(10, 11);
+			m.addEdge(11, 3);
+			m.addEdge(11, 8);
+//		}
 //		m.addEdge(1, 2);
 //		m.addEdge(2, 3);
 //		m.addEdge(3, 1);
