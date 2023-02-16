@@ -9,7 +9,9 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
-class Adjancy1{
+import java.util.PriorityQueue;
+
+class Adjancy{
 	 ArrayList<ArrayList<int[]>> list;
 	
 	 int n;
@@ -56,7 +58,7 @@ class Adjancy1{
 
 
 
-public class 이상한미로 {
+public class 이상한미로2 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -80,18 +82,23 @@ public class 이상한미로 {
 		for(int i = 0; i <str1.length; i++){ // 각 지점에 대한 표시값 Aj
 			Aj[i] = Integer.parseInt(str1[i]);
 		}
+		int arr[] = new int[N+1];
 		Adjancy1 Adjancy1 = new Adjancy1(N+1); // 1-base
 		for(int i = 0; i <M; i++){
-			 		String str2[] = br.readLine().split(" ");
-					int start = Integer.parseInt(str2[0]) ; // 출발지
-					int end =  Integer.parseInt(str2[1]); //도착지
+			 	String str2[] = br.readLine().split(" ");
+				int start = Integer.parseInt(str2[0]) ; // 출발지
+				int end =  Integer.parseInt(str2[1]); //도착지
 			    int dist = Integer.parseInt(str2[2]) ; // 사이 거리
 			   //인접리스트 연결
-			   Adjancy1.addEdge(start,new int[]{end,dist});
-			   Adjancy1.addEdge(end,new int[]{start,dist});
+		  
+			  Adjancy1.addEdge(start,new int[]{end,dist});
+			  Adjancy1.addEdge(end,new int[]{start,dist});
 			
 						
 		}
+		// ?
+		
+		
 		// 구현
 		// 1번 방부터 출발 , 도착방 : N
 		LinkedList<Integer> q = new LinkedList<Integer>();
