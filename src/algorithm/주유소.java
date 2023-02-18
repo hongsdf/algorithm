@@ -6,6 +6,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
+/*
+ * 7
+ * 3 4 2 2 4 5
+ * 8 9 5 4 2 7 1
+ * 
+ * 내림 차순으로 탐색한다. => (8) 9 (5) (4) (2) 7 (1) : 괄호만 선택된 것
+ */
+
 public class 주유소 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
