@@ -37,6 +37,7 @@ public class 문제5D레이저타워건설하기 {
 				}
 			}
 			bw.write(answer+"\n");
+			answer = 0;
 		}
 		bw.flush();
 		bw.close();
