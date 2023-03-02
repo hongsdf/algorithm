@@ -1,7 +1,16 @@
 package Monster;
 
 import java.io.*;
-
+/*
+ * 문제의도 : 패턴 찾기
+ * 생각한 방법 나선형으로 순환하며 수를 채워간다. 수는 N*N까지 이때가 종료시점
+ * 순환방법은 4가지 := 1.열 증가, 2.행 증가, 3. 열 감소, 4. 행 감소 이것을 반복한다.
+ * 반복 횟수는 cycle = 2 * N -1 횟수
+ * 
+ * 
+ * 
+ * 
+ */
 public class 문제5E숫자채우기1 {
 
   public static void main(String[] args) throws IOException{
