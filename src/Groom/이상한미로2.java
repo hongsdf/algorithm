@@ -16,7 +16,7 @@ class Adjancy{
 	
 	 int n;
 	
-	public Adjancy1(int n){
+	public Adjancy(int n){
 		this.list = new ArrayList<ArrayList<int[]>>();
 		
 		for(int i = 0; i <n; i++){
