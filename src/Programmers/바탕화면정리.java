@@ -4,8 +4,8 @@ public class 바탕화면정리 {
 	public static void main(String[] args) {
 		SolutionA3 m = new SolutionA3();
 		String[] wallpaper = {".##...##.", "#..#.#..#", "#...#...#", ".#.....#.", "..#...#..", "...#.#...", "....#...."};
-	//	String[] wallpaper = {"..........", ".....#....", "......##..", "...##.....", "....#....."};
-
+		String[] wallpaper = {"..........", ".....#....", "......##..", "...##.....", "....#....."};
+//
 		int answer[] = m.solution(wallpaper);
 		for(int ans : answer) {
 			System.out.println(ans);
